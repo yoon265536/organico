@@ -1,0 +1,17 @@
+.box {
+  margin: 0 auto;
+  width: 900px;
+  height: 250px;
+  margin-bottom: 30px;
+}
+.box button {
+  color: #fff;
+  background-color: #296653;
+  max-height: 50px;
+}
+.box button:hover {
+  background-color: #97ccac;
+}
+p {
+  font-size: 18px;
+}

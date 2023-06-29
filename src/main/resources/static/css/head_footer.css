@@ -1,0 +1,187 @@
+@charset "UTF-8";
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+html, body, dl, dt, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+  margin: 0;
+  padding: 0;
+  font-family: "nanumsquare";
+}
+body, h1, h2, h3, h4, h5, h6 {
+  font-size: 26px;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  color: #000;
+}
+ul, ol, li, p {
+  list-style: none;
+  display: flex;
+  flex-wrap: nowrap;
+}
+img {
+  border: 0;
+  vertical-align: top;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+button {
+  background: inherit ; border:none; box-shadow:none; border-radius:0; padding:0; overflow:visible; transition: all .3s linear; cursor:pointer 
+}
+.blind {
+   display: none;
+}
+.item_name {
+  font-size: 22px;
+  font-weight: bold;
+}
+.price { 
+  font-size: 18px;
+}
+.t_info {
+  font-size: 17px;
+  font-weight: bold;
+}
+.info {
+  font-size: 15px;
+}
+/* 바로가기 = 웹 접근성 */
+.skip-nav a {
+  position: absolute;
+  color: #eee;
+  width: 100%;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 999;
+  display: block;
+  line-height: 2.5em;
+  text-align: center;
+  left: 0;
+  top: -70px;
+}
+#wrap {
+  width: 1000px;
+  margin: 0 auto;
+}
+#header {
+  padding: 2rem 0  0;
+}
+#header .gnb {
+  padding-bottom: 1.5rem;
+}
+#header .search_box form {
+  position: relative;
+  display: inline-block;
+}
+#header .search_box input {
+  font-size: 15px;
+  width: 20rem;
+  height: 2.5rem;
+  padding: 0 1rem;
+}
+#header .search_box button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: url(/img/icon_search.png) no-repeat center #296653;
+  background-size: 60%;
+  border-radius: 5%;
+}
+#header .search_box button:hover {
+  background-color: #509473;
+}
+#header .gnb .cart a img {
+  float: right;
+  transition: all .3s linear;
+}
+#header .gnb .cart a:hover img {
+  transform: scale(1.1);
+}
+#header .gnb .user_btn div button:hover {
+  color: #296653;
+  font-weight: bold;
+}
+#header .gnb .user_btn div button:active {
+  color: #296653;
+  font-weight: bold;
+  border-style: none;
+}
+#header .head_lnb .lnb_list ul li {
+  font-size: 16px;
+  padding: 0 3rem;
+}
+#header .head_lnb ul li a:hover {
+  font-weight: bold;
+  color: #296653;
+  border-bottom: 3px solid #296653;
+}
+#header .head_lnb ul li a.selected {
+  font-weight: bold;
+  color: #296653;
+  border-bottom: 3px solid #296653;
+}
+/* footer */
+#footer {
+  width: 1000px;
+  margin: 32px auto 0;
+  border-top: 1px solid #828282; 
+  padding: 2rem 0;
+}
+#footer .customer span {
+  font-size: 15px;
+}
+#footer .customer div > p {
+  font-size: 11px;
+}
+#footer ul > li {
+  padding: 0 1.5rem 1rem 0;
+  font: 14px 'NanumGothicBold';
+}
+#footer ul > li a:hover {
+  color: #296653;
+}
+#footer .inner {
+  padding: 2rem 0;
+}
+#footer .inquiry .chat {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 7rem;
+}
+#footer .inquiry .chat span {
+  width: 20%;
+}
+#footer .inquiry button {
+  width: 100%;
+  line-height: 40px;
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px solid#888;
+}
+#footer .inquiry button:hover {
+  background-color: #296653;
+  border: 1px solid#296653;
+  color: #eee;
+  font-weight: bolder;
+}
+#footer .inquiry .chat span div {
+  padding-top: 5px;
+}
+#footer .inquiry .chat span p {
+  font-size: 11px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,77 @@
+@charset "UTF-8";
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+.item_name {
+  font-size: 22px;
+  font-weight: bold;
+}
+.price { 
+  font-size: 18px;
+}
+.t_info {
+  font-size: 17px;
+  font-weight: bold;
+}
+.info {
+  font-size: 15px;
+}
+#content h3 {
+  text-align: center;
+  font: 28px bold;
+  padding: 0 0 2em;
+  padding-bottom: 0;
+}
+#content .suggest_items {
+  padding-bottom: 2rem;
+}
+#content .item_section {
+  margin: 4rem 0;
+}
+#content .item_section .item_info {
+  padding: 3rem 0 0;
+  display: flex;
+  justify-content: center;
+  transition: all .3s linear;
+}
+#content .item_section .item_info:hover {
+  transform: scale(1.02);
+}
+#content .item_section .item_info .text_info {
+  padding-left: 1.3rem;
+}
+#content .item_section .item_info .text_info div:nth-child(2) {
+  padding: 2.2rem 0;
+}
+#content .item_section .item_info .text_info dl:nth-child(2) {
+  padding: 1rem 0;
+}
+#content .item_section .item_info .add_btn {
+  border: 1px solid#97ccac;
+  background-color: #97ccac;
+  color: #eee;
+  font-weight: bold;
+  font-size: 17px;
+  width: 25rem;
+  height: 2.5rem;
+}
+#content .item_section .item_info .add_btn:hover {
+  border: 1px solid#296653;
+  background-color: #296653;
+}
+.card {
+	padding: 10px;
+}
+dd.info {
+  margin-bottom: 16px;
+}
+.card_items {
+  padding: 2rem 0 0;
+}
+
+#content .suggest_items .card {
+  transition: all .3s linear;
+}
+#content .suggest_items .card:hover {
+  transform: scale(1.02);
+  box-shadow:0 8px 8px black;
+}

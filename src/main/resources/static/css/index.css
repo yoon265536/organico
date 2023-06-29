@@ -1,0 +1,80 @@
+@charset "UTF-8";
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+.item_name {
+  font-size: 18px;
+  font-weight: bold;
+}
+.price { 
+  font-size: 15px;
+}
+.origin {
+  font-size: 14px;
+  font-weight: bold;
+}
+.info {
+  font-size: 13px;
+}
+.banner {
+  padding: 3rem 0;
+}
+.arrow {
+  position: fixed;
+  bottom: 30px;
+  right: 8rem;
+  width: 40px;
+  z-index: 3;
+}
+.arrow img {
+  width: 100%;
+}
+#container #carouselExample {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  left: 0;
+}
+#container .carousel-item img {
+	margin: 0 auto;
+}
+#content h3 {
+  text-align: center;
+  font: 26px bold;
+  padding: 0 0 2em;
+}
+#content .veg {
+  width: 220px;
+  overflow: hidden;
+}
+#content .wrap_section {
+  padding: 380px 0 0;
+}
+#content .section {
+  padding: 3rem 0 ;
+}
+#content .section > .suggest_items {
+  display: flex;
+  justify-content: space-between;
+}
+#content .section > .suggest_items a img {
+  width: 220px;
+  transition: all .3s linear;
+}
+#content .section > .suggest_items a:hover img {
+  transform: scale(1.04);
+}
+#content .section > .suggest_items .text_info {
+  padding: 1rem 0;
+}
+#content .section > .suggest_items .text_info p:nth-child(2) {
+  padding: 3px 0 0;
+}
+#content .section .card {
+  overflow: hidden;
+  transition: all .3s linear;
+}
+#content .section .card:hover {
+  transform: scale(1.02);
+  z-index: 1;
+  box-shadow: 0 8px 8px #888;
+}

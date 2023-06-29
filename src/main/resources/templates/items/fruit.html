@@ -1,0 +1,180 @@
+<!doctype html>
+<html class="h-100" lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>ORGANICO FRUIT</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link href="/css/head_footer.css" rel="stylesheet" th:href="@{/css/head_footer.css}">
+    <link href="/css/items.css" rel="stylesheet" th:href="@{/css/items.css}">
+    <link href="../img/favicon2.ico" rel="icon" type="image/x-icon">
+    <script src="../../static/js/script.js" th:src="@{/js/script.js}"></script>
+</head>
+<body>
+<dl class="skip-nav">
+    <dt class="blind"><strong>skip navigation</strong></dt>
+    <dd><a href="#content">Skip to content</a></dd>
+    <dd><a href="#footer">Skip to footer</a></dd>
+</dl>
+<!-- START : header -->
+<div id="wrap">
+    <div id="header">
+        <div class="gnb row">
+            <div class="logo col-4">
+                <h1>
+                    <a href="/" title="메인페이지"><img alt="organico logo" src="../img/logo.png" width="150px"></a>
+                </h1>
+            </div>
+            <div class="search_box col-4">
+                <form action="/order" class="search" th:action="@{/order}" th:method="get">
+                    <input aria-label="Search" id="userId" name="userId" placeholder="주문번호를 입력하세요" required
+                           type="search">
+                    <button class="search btn" id="button-addon1" onclick="location.href='/order'"
+                            type="submit"></button>
+                </form>
+            </div>
+            <div class="col-auto user_btn">
+                <div class="d-inline">
+                    <button class="btn" onclick="location.href='/user/signin'" type="button">로그인</button>
+                </div>
+                <div class="d-inline">
+                    <button class="btn" onclick="location.href='/user/signup'" type="button">회원가입</button>
+                </div>
+            </div>
+            <div class="cart col">
+                <a href="/cart"><img alt="장바구니아이콘" src="../img/icon_cart.png" width="40px"></a>
+            </div>
+        </div>
+        <div class="head_lnb">
+            <h3 class="blind">카테고리</h3>
+            <div class="row">
+                <div class="dropdown col-3">
+                    <ul class="toggle">
+                        <a aria-disabled="false" class="dropdown-button" data-bs-toggle="dropdown" role="button">
+                            <img alt="햄버거아이콘" src="../img/icon_category.png" width="20px">
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="veg.html" th:href="@{|/items/veg|}">야채</a></li>
+                            <li><a class="dropdown-item" href="fruit.html" th:href="@{|/items/fruit|}">과일</a></li>
+                            <li><a class="dropdown-item" href="meat.html" th:href="@{|/items/meat|}">정육</a></li>
+                            <li><a class="dropdown-item" href="fish.html" th:href="@{|/items/fish|}">수산</a></li>
+                        </ul>
+                    </ul>
+                </div>
+                <div class="lnb_list col">
+                    <ul>
+                        <li><a class="veg" href="veg.html" th:href="@{|/items/veg|}" title="야채">야채</a></li>
+                        <li><a class="fruit selected" href="fruit.html" th:href="@{|/items/fruit|}" title="과일">과일</a>
+                        </li>
+                        <li><a class="meat" href="meat.html" th:href="@{|/items/meat|}" title="정육">정육</a></li>
+                        <li><a class="fish" href="fish.html" th:href="@{|/items/fish|}" title="수산">수산</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- START container -->
+    <div id="container">
+        <!-- content -->
+        <div class="banner">
+            <img alt="광고배너" src="../img/banner_fruit.jpeg" width="100%">
+        </div>
+        <div id="content">
+            <div class="item_section">
+                <div>
+                    <h3>과일</h3>
+                </div>
+                <div class="suggest_items">
+                    <!-- first item-->
+                    <div class="card_items">
+                        <div class="card-group">
+                            <div class="card" th:each="item, iterStat:${items}"
+                                 th:if="${iterStat.index >= 6 and iterStat.index < 9}">
+                                <a class="card_link" href="detail_veg.html"
+                                   th:href="@{/detail/detail_item/{id}(id=${item.id})}">
+                                    <!--                                    <img alt="상품이미지" class="card-img-top" th:src="@{${item.imgPath}}">-->
+                                    <img alt="상품이미지" class="card-img-top"
+                                         th:src="@{/admin/img/item/{name}(name=${item.imgName})}">
+                                    <div class="card-body">
+                                        <h4 class="item_name" th:text="${item.name}"></h4>
+                                        <p class="info" th:text="${item.info}"></p>
+                                        <p class="price" th:text="${item.price+'원'}"></p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_items">
+                        <div class="card-group">
+                            <div class="card" th:each="item, iterStat:${items}"
+                                 th:if="${iterStat.index >= 9 and iterStat.index < 12}">
+                                <a class="card_link" href="detail_veg.html"
+                                   th:href="@{/detail/detail_item/{id}(id=${item.id})}">
+                                    <!--                                    <img alt="상품이미지" class="card-img-top" th:src="@{${item.imgPath}}">-->
+                                    <img alt="상품이미지" class="card-img-top"
+                                         th:src="@{/admin/img/item/{name}(name=${item.imgName})}">
+                                    <div class="card-body">
+                                        <h4 class="item_name" th:text="${item.name}"></h4>
+                                        <p class="info" th:text="${item.info}"></p>
+                                        <p class="price" th:text="${item.price+'원'}"></p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 지우면안돼!!!tag  -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- START : footer -->
+    <footer>
+        <div id="footer">
+            <div>
+                <ul>
+                    <li><a href="/">회사 소개</a></li>
+                    <li><a href="/">서비스 소개</a></li>
+                    <li><a href="/">자주하는 질문</a></li>
+                    <li><a href="/">계약고객 특가 공급</a></li>
+                </ul>
+            </div>
+            <div class="inner row">
+                <div class="customer col-4">
+                    <h2><strong>고객센터</strong><strong>1644-1107</strong></h2>
+                    <span>월~토요일 오전 7시-오후 6시</span>
+                    <div>
+                        <p>&copy;ORGANICO CORP. ALL RIGHTS RESERVED</p>
+                    </div>
+                </div>
+                <div class="inquiry col">
+                    <div class="chat">
+							<span>
+								<div><button>카카오톡 문의</button></div>
+								<div>
+									<p>월~토요일</p>
+									<p>오전 7시-오후 6시</p>
+								</div>
+							</span>
+                        <span>
+								<div><button>1:1 문의</button></div>
+								<div>
+									<p>고객센터 운영시간에 순차적으로 답변드리겠습니다.</p>
+								</div>
+							</span>
+                        <span>
+								<div><button>대량주문 문의</button></div>
+								<div>
+									<p>월~금요일</p>
+									<p>오전 9시~오후 6시</p>
+								</div>
+							</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

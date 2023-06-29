@@ -1,0 +1,163 @@
+.total div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper {
+  font-size: 25px;
+  margin: 0 auto;
+  padding: 50px;
+}
+.wrapper2 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px;
+  background-color: #f5f5f5;
+  color: #333;
+}
+.btn-secondary {
+  background-color: #296653;
+}
+.btn-secondary:hover {
+  background-color: #509473;
+}
+.cart_mainbtns .btn-success {
+  color: white;
+  background-color: #296653;
+} 
+.cart_mainbtns .btn-success:hover {
+  background-color: #509473;
+  border-color: #509473;
+}
+.btn-fail {
+  color: black;
+  background-color:#C0C0C0;
+}
+.cart_mainbtns .btn-fail:hover {
+  background-color:#CfCfCf;
+} 
+
+.float-md-start {
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+.total .cart_mainbtns {
+  margin-top: 30px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown:hover {
+  outline-offset: 5px;
+  position: relative;
+}
+
+.dropdown:hover .dropdown-menu .img {
+  display: block;
+}
+
+thead {
+  background-color: #97ccac;
+}
+
+.wrapper {
+  font-size: 25px;
+  margin: 0 auto;
+  padding: 50px;
+}
+.wrapper2 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px;
+  background-color: #f5f5f5;
+  color: #333;
+  padding-bottom: 0px;
+}
+.cart_mainbtns {
+  width: 27%;
+  height: 100px;
+  margin: auto;
+}
+
+.btn-secondary {
+  background-color: #296653;
+}
+.btn-secondary:hover {
+  background-color: #509473;
+}
+.cart_mainbtns .btn-success {
+  color: white;
+  background-color: #296653;
+  max-height: 50px;
+  width: 150px;
+} 
+.cart_mainbtns .btn-success:hover {
+  background-color: #509473;
+}
+.cart_mainbtns .btn-fail {
+  color: black;
+  background-color:#C0C0C0;
+  max-height: 50px;
+  width: 150px;
+}
+.cart_mainbtns .btn-fail:hover {
+  background-color:#cfcfcf;
+} 
+
+
+/* 주문조회 : table */
+.td-content {
+  font-weight: bold;
+  font-size: 18px;
+}
+.td-sub-content {
+  font-size: 16px;
+}
+.content {
+  padding: 3rem;
+}
+h3 {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.container h1 {
+  font-size: 27px;
+  font-weight: bold;
+}
+.container td {
+  font-size: 17px;
+  vertical-align: middle;
+}
+.container th {
+  font-size: 20px;
+}
+
+.total p {
+  font-size: 17px;
+}
+
+.total input {
+  font-size: 17px;
+}
+
+.cart_mainbtns {
+  width: 400px;
+}
+td.quantity {
+  width: 60px;
+}
+.quantity_btn {
+  font-weight: bolder;
+  padding: 0;
+  width: 25px;
+  height: 25px;
+}
+td form button.btn-outline-dark:hover {
+  background-color: #509473;
+  border-color: #509473;
+}

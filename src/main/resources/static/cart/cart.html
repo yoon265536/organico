@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html class="h-100" lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>ORGANICO cart</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/cart.css" rel="stylesheet">
+    <link href="/css/head_footer.css" rel="stylesheet">
+    <link href="/img/favicon2.ico" rel="icon" type="image/x-icon">
+    <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+<dl class="skip-nav">
+    <dt class="blind">
+        <strong>skip naviation</strong>
+    </dt>
+    <dd>
+        <a href="#content">Skip to content</a>
+    </dd>
+    <dd>
+        <a href="#footer">Skip to footer</a>
+    </dd>
+</dl>
+<div id="wrap">
+    <div id="header">
+        <div class="gnb row">
+            <div class="logo col-4">
+                <h1>
+                    <a href="#" title="메인페이지"><img alt="organico logo"
+                                                   src="img/logo.png" width="150px"></a>
+                </h1>
+            </div>
+            <div class="search_box col-4">
+                <form action="#" class="search" name="search">
+                    <input id="search" placeholder="주문번호를 입력하세요" required
+                           type="search">
+                    <button class="search">
+                        <span class="blind">검색</span>
+                    </button>
+                </form>
+            </div>
+            <div class="cart col-4">
+                <a href="#"><img alt="장바구니아이콘" src="img/icon_cart.png"
+                                 width="40px"></a>
+            </div>
+        </div>
+        <div class="head_lnb">
+            <h3 class="blind">카테고리</h3>
+            <div class="row">
+                <div class="dropdown col-3">
+                    <ul class="toggle">
+                        <button aria-disabled="false" class="dropdown-button"
+                                data-bs-toggle="dropdown" role="button">
+                            <img alt="햄버거아이콘" src="img/icon_category.png" width="20px">
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">야채</a></li>
+                            <li><a class="dropdown-item" href="#">과일</a></li>
+                            <li><a class="dropdown-item" href="#">정육</a></li>
+                            <li><a class="dropdown-item" href="#">수산</a></li>
+                        </ul>
+                    </ul>
+                </div>
+                <div class="lnb_list col">
+                    <ul>
+                        <li><a class="veg" href="#" title="야채">야채</a></li>
+                        <li><a class="fruit" href="#" title="과일">과일</a></li>
+                        <li><a class="meat" href="#" title="정육">정육</a></li>
+                        <li><a class="fish" href="#" title="수산">수산</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-5"
+                style="text-align: center; padding: 30px 0px 30px;">장바구니</h1>
+        </div>
+        <div class="row">
+            <div class="wrapper2">
+                <div style="text-align: center;">
+                    <table class="table table-hover">
+                        <tr>
+                            <th>상품명</th>
+                            <th>원산지</th>
+                            <th>가격</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td>깐 대파 500g</td>
+                            <td>국산</td>
+                            <td>2,990원</td>
+                            <td>
+                                <button class="btn btn-outline-danger" th:onclick="goDelete();"
+                                        type="button">삭제
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>[KF365] 감자 1kg</td>
+                            <td>국내산</td>
+                            <td>6,300원</td>
+                            <td>
+                                <button class="btn btn-outline-danger" th:onclick="goDelete();"
+                                        type="button">삭제
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>국산 꽃게 다짐살 5kg</td>
+                            <td>국산</td>
+                            <td>12,900원</td>
+                            <td>
+                                <button class="btn btn-outline-danger" th:onclick="goDelete();"
+                                        type="button">삭제
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>삼겹살 대패 1kg</td>
+                            <td>네덜란드산</td>
+                            <td>12,900원</td>
+                            <td>
+                                <button class="btn btn-outline-danger" th:onclick="goDelete();"
+                                        type="button">삭제
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+                    <form action="" method="post" th:action="@{/cart/order}">
+                        <table>
+                            <div class="total">
+                                <div class="row" style="padding-top: 20px;">
+                                    <div class="col-auto">
+                                        <input class="cart_bigorderbtn float-lg-start ps-3"
+                                               name="userId" placeholder="이름을 입력하세요" type="text">
+                                        <p class="float-start ps-3" style="color: red;">* 주문조회시
+                                            사용되는 정보입니다.</p>
+                                    </div>
+                                    <div class="col-4">
+											<span style="font-weight: bold; font-size: 21px;"
+                                                  th:text="${totalPrice}">총 결제금액: 35,090원</span>
+                                    </div>
+                                </div>
+                                <div class="cart_mainbtns">
+                                    <button class="btn btn-fail float-md-start" th:onclick="location.href='/'"
+                                            type="button">취소
+                                    </button>
+                                    <button class="btn btn-success float-md-end" type="submit">주문하기</button>
+                                </div>
+                            </div>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- START : footer -->
+<footer>
+    <div id="footer">
+        <div>
+            <ul>
+                <li><a href="#">회사 소개</a></li>
+                <li><a href="#">서비스 소개</a></li>
+                <li><a href="#">자주하는 질문</a></li>
+                <li><a href="#">계약고객 특가 공급</a></li>
+            </ul>
+        </div>
+        <div class="inner row">
+            <div class="customer col-4">
+                <h2>
+                    <strong>고객센터</strong><strong>1644-1107</strong>
+                </h2>
+                <span>월~토요일 오전 7시-오후 6시</span>
+                <div>
+                    <p>&copy;ORGANICO CORP. ALL RIGHTS RESERVED</p>
+                </div>
+            </div>
+            <div class="inquiry col">
+                <div class="chat">
+						<span>
+							<div>
+								<button>카카오톡 문의</button>
+							</div>
+							<div>
+								<p>월~토요일</p>
+								<p>오전 7시-오후 6시</p>
+							</div>
+						</span> <span>
+							<div>
+								<button>1:1 문의</button>
+							</div>
+							<div>
+								<p>365일 고객센터 운영시간에 순차적으로 답변드리겠습니다.</p>
+							</div>
+						</span> <span>
+							<div>
+								<button>대량주문 문의</button>
+							</div>
+							<div>
+								<p>월~금요일</p>
+								<p>오전 9시~오후 6시</p>
+							</div>
+						</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</body>
+
+</html>

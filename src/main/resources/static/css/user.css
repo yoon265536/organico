@@ -1,0 +1,132 @@
+@charset "UTF-8";
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+html, body, dl, dt, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+  margin: 0;
+  padding: 0;
+  font-family: "nanumsquare";
+}
+body, h1, h2, h3, h4, h5, h6 {
+  font-size: 26px;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  color: #000;
+}
+ul, ol, li, p {
+  list-style: none;
+  display: flex;
+  flex-wrap: nowrap;
+}
+th {
+  font-size: 22px;
+  vertical-align: middle;
+  text-align: center;
+}
+td {
+  font-size: 20px;
+  vertical-align: middle;
+  text-align: center;
+}
+img {
+  border: 0;
+  vertical-align: top;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+.btn_color_outline {
+  color: #296653;
+  background-color: none;
+  border-color: #296653;
+}
+.btn_color_outline:hover {
+  background-color: #509473;
+  border-color: #509473;
+}
+.btn_color {
+  background-color: #296653;
+  border-color: #296653;
+  color: #fff;
+}
+.btn_color:hover {
+  background-color: #509473;
+  border-color: #509473;
+}
+#wrap {
+  width: 970px;
+  margin: 0 auto;
+}
+
+/* header */
+#header {
+  padding: 2rem 0  0;
+}
+#header .gnb div span {
+  font-weight: bold;
+}
+#header .gnb {
+  padding-bottom: 1.5rem;
+}
+#header .search_box form {
+  position: relative;
+  display: inline-block;
+}
+#header .search_box input {
+  font-size: 15px;
+  width: 20rem;
+  height: 2.5rem;
+  padding: 0 1rem;
+}
+
+/* container */
+#container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 20px; 
+}
+#container button.item_add {
+  position: fixed;
+  right: 368px;
+  bottom: 50px;
+  width: 150px;
+  height: 50px;
+  background: url(../img/add_item.png) no-repeat center;
+}
+#container button.item_add:hover {
+  background: url(../img/add_item_hover.png);
+}
+#container div.item_img img {
+	width: 550px;
+	height: 700px;
+}
+#container form.user_form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+#container form.user_form div {
+  max-width: 400px;
+  margin: auto;
+  font-size: 18px;
+  font-weight: bold;
+  vertical-align: middle;
+}
+#container td button {
+  font-weight: bolder;
+  padding: 0;
+  width: 80px;
+  height: 30px;
+}
+#container td.btn_size {
+  width: 80px;
+}
+#container form div label {
+  font-weight: bold;
+  font-size: 18px;
+  vertical-align: middle;
+}
+#container form div input {
+	margin-bottom: 5px;
+}
