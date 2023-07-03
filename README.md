@@ -8,8 +8,7 @@
 ## Coding Convention
    👉 
 ## 시스템구조
-
-
+![스크린샷 2023-07-03 145335](https://github.com/yoon265536/organico/assets/134990199/4a60080f-8c22-49e8-8d66-5623d88a65d6)
 ## REST API
    👉 
    
