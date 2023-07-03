@@ -9,10 +9,8 @@
 ![스크린샷 2023-07-03 145335](https://github.com/yoon265536/organico/assets/134990199/4a60080f-8c22-49e8-8d66-5623d88a65d6)
 ## REST API
  ![스크린샷 2023-07-03 145449](https://github.com/yoon265536/organico/assets/134990199/db250dba-55e8-4675-8d74-62f736c13df7)
-   
 ## ERD
-
-
+![스크린샷 2023-07-03 145625](https://github.com/yoon265536/organico/assets/134990199/16b4c23b-1e5f-4146-8236-b96d2a5babd6)
 ## 화면 설계
    📝 
 
@@ -28,17 +26,13 @@
 
 ## 트러블슈팅
 ### 로그인
-![image](https://github.com/Neo9ri/oneshot/assets/116098324/9b16c991-c3f8-4901-8248-297f80491dd1)
-![image](https://github.com/Neo9ri/oneshot/assets/116098324/0787c041-48e4-42bb-8d45-413866f59059)
-![image](https://github.com/Neo9ri/oneshot/assets/116098324/bd0fdce0-d8a3-4c2f-b398-5f1f3c829426)
+
 
 ### 장바구니
-![image](https://github.com/Neo9ri/oneshot/assets/116098324/9d4bf557-d179-4952-9a37-9d1c8d096b74)
-![image](https://github.com/Neo9ri/oneshot/assets/116098324/83d15c6b-723d-4f9c-8162-57bf53fa0f5c)
+
 
 ### 재고관리
-![image](https://github.com/Neo9ri/oneshot/assets/116098324/3e02f0f6-93be-4ea8-944b-01882d719306)
-![image](https://github.com/Neo9ri/oneshot/assets/116098324/ef7407d3-9e33-4adb-b2f6-371ee1801801)
+
 
 
 ## 배포URL
